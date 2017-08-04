@@ -1,3 +1,8 @@
+2017-08-07 Alex Lindsay <alexlindsay239@gmail.com>
+
+	* cp-support.c (cp_canonicalize_string): Free return value of
+	cp_comp_to_string
+
 2017-08-03  Tom Tromey  <tom@tromey.com>
 
 	* utils.c (make_cleanup_freeargv, do_freeargv, gdb_buildargv):

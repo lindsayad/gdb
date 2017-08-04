@@ -566,7 +566,9 @@ cp_canonicalize_string (const char *string)
     return std::string ();
 
   estimated_len = strlen (string) * 2;
-  std::string ret = cp_comp_to_string (info->tree, estimated_len);
+  char *ret_char = cp_comp_to_string (info->tree, estimated_len);
+  std::string ret = ret_char;
+  xfree (ret_char);
 
   if (ret.empty ())
     {
