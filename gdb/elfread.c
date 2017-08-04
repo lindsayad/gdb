@@ -1144,6 +1144,9 @@ elf_read_minimal_symbols (struct objfile *objfile, int symfile_flags,
 
   if (symtab_create_debug)
     fprintf_unfiltered (gdb_stdlog, "Done reading minimal symbols.\n");
+  if (synthcount > 0)
+    xfree((char *) synthsyms->name);
+  xfree (synthsyms);
 }
 
 /* Scan and build partial symbols for a symbol file.
