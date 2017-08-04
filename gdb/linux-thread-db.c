@@ -1083,6 +1083,8 @@ record_thread (struct thread_db_info *info,
   if (target_has_execution)
     check_thread_signals ();
 
+  xfree (priv);
+  
   return tp;
 }
 

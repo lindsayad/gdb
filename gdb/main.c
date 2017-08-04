@@ -302,6 +302,7 @@ setup_alternate_signal_stack (void)
   ss.ss_flags = 0;
 
   sigaltstack(&ss, NULL);
+  xfree (ss.ss_sp);
 #endif
 }
 
