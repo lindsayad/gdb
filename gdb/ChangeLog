@@ -43,6 +43,11 @@
 	* regformats/i386/x32-avx.dat: Removed.
 	* regformats/i386/x32.dat: Removed.
 
+2017-08-08 Alex Lindsay <alexlindsay239@gmail.com>
+
+	* elfread.c (elf_read_minimal_symbols): Free synthsyms->name and
+	synthsyms
+
 2017-08-07  Maciej W. Rozycki  <macro@imgtec.com>
 
 	PR breakpoints/21886
